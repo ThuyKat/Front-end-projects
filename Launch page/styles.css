@@ -1,0 +1,40 @@
+body {
+ 
+  color: rgb(231, 36, 91);
+  text-align: center;
+  font-family: "Mountains of Christmas", serif;
+  margin:0;
+}
+
+#hero{
+    background-image: url("assets/christmas.webp");
+    background-size: cover;
+    padding-top:20px;
+    padding-bottom:100px;
+}
+
+#logo-main {
+  width: 250px;
+  border-radius: 50%;
+  background-color: azure;
+  opacity: 0.7;
+}
+
+#title{
+    font-size: 100px;
+    text-shadow: 5px -5px 5px rgb(84, 5, 57);
+}
+.underline{
+    border-bottom: 5px solid rgb(231, 36, 91);
+}
+.btn{
+    font-family: inherit; 
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size:30px;
+    background: transparent;
+    color:white;
+    border-radius:10px;
+    text-shadow: 0 0 5px yellow;
+    border:1px solid rgb(251, 251, 16);
+}
