@@ -8,7 +8,9 @@
 ![alt text](screenshots/business-card.png)
 
 3. [Christmas launch page](./Launch%20page/)
+
 ![alt text](screenshots/christmas.png)
 
 4. [Hometown homepage](./Hometown%20homepage/)
+
 ![alt text](screenshots/Hometown.png)
