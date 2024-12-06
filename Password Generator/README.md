@@ -27,6 +27,9 @@ A web application that generates random 15-character passwords.[View Live Projec
 - Random character selection logic
 
 ## Design Process
+Design file: 
+https://www.figma.com/design/NEj9JDycMjF3XKXq7swoc9/Random-Password-Generator-(New-version)?node-id=102-702&node-type=frame&t=x0OjOPYdb9z4ubE3-0
+
 Used Figma for:
 - Layout design and spacing
 - Component measurements
