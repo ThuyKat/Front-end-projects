@@ -1,1 +1,43 @@
+# Password Generator Project
 
+A web application that generates random 15-character passwords.[View Live Project](https://marvelous-lokum-980e7e.netlify.app/)
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
+## Features
+
+1. Password Generation
+- 15-character random string
+- Combination of letters, numbers and symbols
+- Clear display of generated password
+
+2. User Interface
+- Clean, responsive layout using flexbox
+- Custom Google font implementation
+- Interactive button design with hover effects
+- Clear password display box
+- Box shadow for visual depth
+
+## JavaScript Implementation
+- DOM manipulation (getElementById, getElementsByClassName)
+- Event handling for password generation
+- Random character selection logic
+
+## Design Process
+Used Figma for:
+- Layout design and spacing
+- Component measurements
+- Asset preparation
+- Visual elements selection
+
+## Future Improvements
+- Adjustable password length
+- Copy to clipboard functionality
+- Toggle dark/light theme
+- Toggle options for:
+ - Special characters
+ - Numbers
+ - Uppercase/lowercase letters

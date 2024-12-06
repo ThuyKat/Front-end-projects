@@ -42,6 +42,12 @@ body {
   margin-bottom: 35px;
 }
 
+#btn-generate-password:hover{
+  background-color: #0c6016;
+  color:#b4ce1f
+}
+
+
 hr {
   border: 1px solid #2f3e53;
 }

@@ -8,11 +8,11 @@ let generatePasswordEl = document.getElementById("btn-generate-password");
 let pass1El = document.getElementsByClassName("password")[0];
 let pass2El = document.getElementsByClassName("password")[1];
 
-//password must be 13 character length
+//password must be 15 character length
 generatePasswordEl.addEventListener("click",generatePassword);
 function generateRandomString(){
     console.log("generating password");   
-    for(let i=0;i<13;i++){
+    for(let i=0;i<15;i++){
         let randomIndex = Math.floor(Math.random()*characters.length);
         chars.push(characters[randomIndex]);
     }
