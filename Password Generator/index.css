@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: "Karla", sans-serif;
   padding-top: 60px;
+  background-color: black;
 }
 
 .container {
@@ -42,11 +43,10 @@ body {
   margin-bottom: 35px;
 }
 
-#btn-generate-password:hover{
+#btn-generate-password:hover {
   background-color: #0c6016;
-  color:#b4ce1f
+  color: #b4ce1f;
 }
-
 
 hr {
   border: 1px solid #2f3e53;
