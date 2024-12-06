@@ -10,8 +10,11 @@ A web application that generates random 15-character passwords.[View Live Projec
 ## Features
 
 1. Password Generation
-- 15-character random string
-- Combination of letters, numbers and symbols
+- 15-character random string by default
+- Adjustable password length
+- Combination of letters, numbers and symbols.Ability to toggle options for:
+ - Special characters
+ - Numbers
 - Clear display of generated password
 
 2. User Interface
@@ -37,10 +40,7 @@ Used Figma for:
 - Visual elements selection
 
 ## Future Improvements
-- Adjustable password length
+
 - Copy to clipboard functionality
 - Toggle dark/light theme
-- Toggle options for:
- - Special characters
- - Numbers
- - Uppercase/lowercase letters
+

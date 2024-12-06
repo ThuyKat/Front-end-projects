@@ -18,3 +18,7 @@
 5. [BasketBall scoreboard](./Basketball%20Scoreboard/)
 
 ![alt text](screenshots/basketball-scoreboard.png)
+
+6.[Password Generator](./Password%20Generator/)
+
+![alt text](screenshots/password-generator.png)

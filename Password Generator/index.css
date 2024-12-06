@@ -2,16 +2,18 @@ body {
   margin: 0;
   font-family: "Karla", sans-serif;
   padding-top: 60px;
+  padding-bottom:60px;
   background-color: black;
+  /* text-align: center; */
 }
 
 .container {
   background-color: #1f2937;
   color: white;
   width: 550px;
-  height: 500px;
+  height: 700px;
   margin: 0 auto;
-  padding: 100px 50px 0 50px;
+  padding: 50px 50px 0 50px;
 }
 
 #title {
@@ -66,3 +68,16 @@ hr {
   width: 200px;
   line-height: 40px;
 }
+
+.customization{
+  background-color:#273549 ;
+  height:160px;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+#slider{
+  width:90%;
+}
+
+

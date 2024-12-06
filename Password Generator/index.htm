@@ -12,6 +12,25 @@
         <div class="container">
             <h1 id="title">Generate a <span id="highlight">random password<span></h1>
             <p id="description"> Never use an insecure password again.</p>
+            <div class="customization">
+                <div class="slider-container">
+                    <p>Password length:</p>
+                    <span id="range-value">15</span>
+                    <input type="range" min="1" max="128" value="15" id="slider">
+                </div>
+                <p>Options:</p>
+                <div class="checkbox-container">
+                    
+                    <label>
+                        <input type="checkbox" id="symbols" checked>
+                        Include Symbols
+                    </label>
+                    <label>
+                        <input type="checkbox" id="numbers" checked>
+                        Include Numbers
+                    </label>
+                </div>
+            </div>
             <button id="btn-generate-password">Generate passwords</button>
             <hr>
             <div class="pass-container">
