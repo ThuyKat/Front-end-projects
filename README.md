@@ -19,6 +19,15 @@
 
 ![alt text](screenshots/basketball-scoreboard.png)
 
-6.[Password Generator](./Password%20Generator/)
+6. [Password Generator](./Password%20Generator/)
 
 ![alt text](screenshots/password-generator.png)
+
+7. [Chrome Extension- Save tabs](./Chrome%20Extension/)
+
+![alt text](screenshots/chrome-extension.png)
+
+8. [Unit conversion apps](./Unit%20conversion/)
+
+![alt text](<screenshots/Unit conversion.png>)
+
