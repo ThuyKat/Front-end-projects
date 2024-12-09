@@ -13,13 +13,19 @@
 
 4. [Hometown homepage](./Hometown%20homepage/)
 
+[Link to Webpage on Netlify](https://graceful-granita-31f70c.netlify.app)
+
 ![alt text](screenshots/Hometown.png)
 
 5. [BasketBall scoreboard](./Basketball%20Scoreboard/)
 
+[Link to Application via Netlify](https://marvelous-lokum-980e7e.netlify.app/)
+
 ![alt text](screenshots/basketball-scoreboard.png)
 
-6. [Password Generator](./Password%20Generator/)
+6. [Password Generator](./Password%20Generator/) 
+
+[Link to application via Netlify](https://cheery-griffin-f4c6a5.netlify.app)
 
 ![alt text](screenshots/password-generator.png)
 
