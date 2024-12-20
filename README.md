@@ -1,4 +1,5 @@
 # Front-end solo
+
 1. [Google font-page clone](./Google%20search/)
 
 ![alt text](screenshots/google-clone.png)
@@ -23,7 +24,7 @@
 
 ![alt text](screenshots/basketball-scoreboard.png)
 
-6. [Password Generator](./Password%20Generator/) 
+6. [Password Generator](./Password%20Generator/)
 
 [Link to application via Netlify](https://cheery-griffin-f4c6a5.netlify.app)
 
@@ -39,3 +40,9 @@
 
 ![alt text](<screenshots/Unit conversion.png>)
 
+9. [Instagram Post Clone](./Oldagram/)
+
+[Link to application via Netlify]
+(https://eloquent-sunshine-6c52d4.netlify.app/)
+
+![alt text](screenshots/oldagram.png)
