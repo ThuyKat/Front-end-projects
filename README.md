@@ -42,7 +42,6 @@
 
 9. [Instagram Post Clone](./Oldagram/)
 
-[Link to application via Netlify]
-(https://eloquent-sunshine-6c52d4.netlify.app/)
+[Link to application via Netlify](https://eloquent-sunshine-6c52d4.netlify.app/)
 
 ![alt text](screenshots/oldagram.png)
