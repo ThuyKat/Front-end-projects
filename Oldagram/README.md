@@ -56,7 +56,7 @@ This project creates a simplified version of Instagram's post interface, featuri
 ## Key Learning Points
 
 1. **Accessibility Best Practices**
-   - Using `<i>` elements with `aria-label` for icons. However we stick to `<img>` because we dowloaded them to local machine.
+   - `<i>` elements with `aria-label` can be used for icons. However we stick to `<img>` because we dowloaded them to local machine.
    - Implementing proper alternative text for images
    - Semantic HTML structure for better screen reader compatibility
 
