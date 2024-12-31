@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>TwimCat</title>
+</head>
+<body>
+    <header>
+        <h1>TwimCat</h1>
+    </header>
+    <main>
+        <div class="tweet-input-area">
+            <img src="images/logo.jpeg" class="profile-pic">
+            <textarea placeholder="What's happening?" id="tweet-input" class="tweet-input"></textarea>
+        </div>
+        <button id="tweet-btn" class="tweet-btn">Tweet</button>
+        <div class="feed" id="feed">
+            <!-- Tweet here -->
+            <div class="tweet-container">
+                <img src="images/logo.jpeg" alt="profile photo of user" class="profile-pic">
+                <div>
+                    <p class="handler">@Handler</p>
+                    <p class="tweet-text">Tweet text</p>
+                    <div class="icon-group">
+                        <span>
+                            <i class="fa-regular fa-comment-dots"></i>
+                            0
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-heart"></i>
+                            0
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-retweet"></i>
+                            0
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tweet-container">
+                <img src="images/logo.jpeg" alt="profile photo of user" class="profile-pic">
+                <div>
+                    <p class="handler">@Handler</p>
+                    <p class="tweet-text">Tweet text</p>
+                    <div class="icon-group">
+                        <span class="icon">
+                            <i class="fa-regular fa-comment-dots"></i>
+                            0
+                        </span>
+                        <span class="icon">
+                            <i class="fa-solid fa-heart"></i>
+                            0
+                        </span>
+                        <span class="icon">
+                            <i class="fa-solid fa-retweet"></i>
+                            0
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+        <script src="index.js" type="module"></script>
+    
+</body>
+</html>
