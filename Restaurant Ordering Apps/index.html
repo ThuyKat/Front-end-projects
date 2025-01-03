@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./index.css" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Jimmy's Diner</title>
+  </head>
+  <body>
+    <header>
+      <img
+        class="banner"
+        src="images/header.png"
+        alt="Header image of Jimmy's Diner restaurant featuring a delicious burger served on a rustic wooden table"
+      />
+    </header>
+    <main>
+      <div id="menu">
+        <!-- menu items are listed here -->
+      </div>
+      <!-- order summary -->
+      <div class="order-summary hidden" id="order-summary">
+        <p class="order-title">Your order</p>
+        <div class="order-details" id="order-details">
+          <!-- Items are added here -->
+        </div>
+        <div class="order-line">
+          <p class="item-name">Total price</p>
+          <p class="item-price" id="total-order"></p>
+        </div>
+        <button class="complete-order-btn" id="complete-btn">
+          Complete order
+        </button>
+      </div>
+      <!-- modal to proceed payment -->
+      <div class="modal-container hidden" id="modal-container">
+        <div class="modal-inner-container">
+          <h1 class="modal-heading">Enter card details</h1>
+          <form id="payment-form">
+            <input
+              class="modal-input"
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              aria-label="name on credit card"
+              required
+            />
+            <!-- input 19 digits -->
+            <input
+              class="modal-input"
+              type="number"
+              name="card-number"
+              placeholder="Enter card number"
+              aria-label="credit card number"
+              required
+            />
+            <!-- input 3 digits -->
+            <input
+              class="modal-input"
+              type="number"
+              name="CVV"
+              placeholder="Enter CVV"
+              aria-label="CVV number"
+              required
+            />
+            <button class="modal-pay-btn" id="pay-btn" type="submit">
+              Pay
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
