@@ -1,4 +1,8 @@
 # Restaurant Ordering App
+
+Design:
+ https://www.figma.com/design/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Restaurant-Menu?node-id=8-237&t=7QRjVp60tMpU2u4Z-0
+
 ## Description
 A restaurant ordering web application where users can browse menu items, add/remove items to their order, see real-time order updates, and complete their purchase through a payment modal.
 
