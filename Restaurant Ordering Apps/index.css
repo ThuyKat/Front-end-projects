@@ -1,7 +1,7 @@
 body{
     margin:0 auto;
     font-family: "Smythe", serif;
-    width:600px;
+    min-width:600px;
     box-sizing: border-box;
 }
 
@@ -13,13 +13,10 @@ body{
 /* icon,button */
 
 .item-icon{
-    font-size:78px;
-    line-height: 98px;
+    font-size:4.875rem;
     opacity:72%;
-    margin:0;
-    
+    margin:0;   
 }
-
 
 /* item card */
 .container{
@@ -28,13 +25,12 @@ body{
     align-items: center;
 }
 .item-details{
-    width:350px;
+    width:70%;
     
 }
 
 .item-name{
-    font-size:28px;
-    line-height: 16.8px;
+    font-size:1.75rem;
 }
 
 .item-description{
@@ -42,21 +38,20 @@ body{
 }
 
 .item-price{
-    font-size:20px;
+    font-size:1.25rem;
 }
 
 .add-button{
     border:1.5px solid #DEDEDE;
     background-color: white;
     font-weight: 200;  
-    height:50px;
-    width:50px;
+    height:1.5625em;
+    width:1.5625em;
     border-radius: 50%;  
     margin:0;
-    font-size: 32px;
+    font-size: 2rem;
     font-family: "Inter", serif;
-    line-height: 35px;
-    padding-bottom:4px;
+    padding-bottom:0.25rem;
 } 
 
 .add-button:hover{
@@ -68,19 +63,19 @@ body{
 
 /* layout */
 .container-wrapper{
-    width:550px;
+    width:92%;
     margin:0 auto;
     border-bottom: 1px solid #D2D2D2;
-    padding-top:50px;
-    padding-bottom:50px;  
+    padding-top:3.125em;
+    padding-bottom:3.125em;  
 }
 
 /* order */
 .order-title{
-    font-size: 28px;
+    font-size: 1.75rem;
     text-align: center;
     margin:0;
-    margin-bottom:64px;
+    margin-bottom:2.286em;
 }
 .order-details{
     border-bottom:2px solid #393333;
@@ -96,16 +91,16 @@ body{
 }
 
 .order-summary{
-    width:550px;
+    width:92%; /*550/600 = 92% */
     margin:0 auto;
-    padding:30px 0;
+    padding: 1.875em 0; /*30:16=1.875*/
 }
 .remove-btn{
     margin:auto;
     background-color: white;
     border:none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
+    font-size: 0.75rem;
     color:#BBBBBB;
     font-weight: 400;
 }
@@ -115,17 +110,17 @@ body{
     box-shadow: 0 1px 2px #0000000D;
     border:none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size:16px;
+    font-size:1em;
     font-weight: 700;
     color:#FFFFFF;
-    padding:18px 0;
-    margin:50px auto;
+    padding:1.125em 0;/*18:16 = 1.125*/
+    margin:3.125em auto;/*50:16 = 3.125*/
 }
 
 /* modal */
 .modal-container{
-    width:524px;
-    height:542px;
+    width:32.75rem; /*524px*/
+    height:32.75rem;/*524px*/
     border:1.3 solid #757575;
     border-radius:4px;
     box-shadow:5px 5px 255px #00000080;
@@ -140,15 +135,14 @@ body{
     
 }
 .modal-inner-container{
-    width:475px;
+    width:90.6%;/* 475/524px*/
     margin:0 auto;
     
 }
 .modal-heading{
     font-weight: 700;
-    font-size: 24px;
-    line-height: 31px;
-    margin:46px auto;
+    font-size: 1.5rem; /*24/16 = 1.5rem*/
+    margin:1.916em auto; /*46/24=1.916em*/
     text-align: center;
 }
 .modal-input{
@@ -156,10 +150,10 @@ body{
     width:100%;
     border:1.3px solid #757575;
     border-radius:4px;
-    padding:28px 0 28px 25px;
-    font-size:20px;
+    padding:1.4em 0 1.4em 1.25em;/*28/20 = 1.4em, 25/20=1.25em*/
+    font-size:1.25rem; /*20/16 = 1.25rem*/
     box-sizing: border-box;
-    margin-bottom:23px;
+    margin-bottom:1.15em;/*23/20=1.15em*/
 
 }
 .modal-pay-btn{
@@ -167,22 +161,22 @@ body{
     background-color: #16DB99;
     border:none;
     color:white;
-    font-size: 20px;
-    padding:16px;
+    font-size: 1.25rem;/*20/16 = 1.25rem*/
+    padding:0.8em; /*16/20 =0.8em*/
     font-weight:700;
     border-radius:4px;
-    margin-top:23px;
+    margin-top:1.15em; /*23/20 =1.15em*/
 }
 /* message */
 .message-container{
     background-color: #ECFDF5;
-    padding:50px 0;
+    padding:1.67em 0; /*50/30=1.67em*/
     width:100%;
     border-radius:3px;
     text-align: center;
-    font-size:30px ;
+    font-size:1.875rem ;/*30px*/
     color:#065F46;
-    height:120px;
+    height:4em;
 }
 /* utilities */
 .hidden{

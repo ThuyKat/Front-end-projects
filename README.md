@@ -50,7 +50,7 @@
 
 11. [Restaurant Ordering Apps](./Restaurant%20Ordering%20Apps/)
 
-[Link to application via Netlify](https://brilliant-kitten-465579.netlify.app)
+[Link to application via Netlify](https://fluffy-salmiakki-e1d2dc.netlify.app)
 
 ![alt text](screenshots/restaurant-order-1.png)
 ![alt text](screenshots/restaurant-order-2.png)
