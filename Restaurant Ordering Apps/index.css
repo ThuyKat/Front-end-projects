@@ -1,7 +1,7 @@
 body{
     margin:0 auto;
     font-family: "Smythe", serif;
-    min-width:600px;
+    width:100vw;
     box-sizing: border-box;
 }
 
@@ -13,7 +13,7 @@ body{
 /* icon,button */
 
 .item-icon{
-    font-size:4.875rem;
+    font-size:3rem;
     opacity:72%;
     margin:0;   
 }
@@ -23,6 +23,7 @@ body{
     display:flex;
     gap:30px;
     align-items: center;
+    justify-content: space-between;
 }
 .item-details{
     width:70%;
@@ -30,28 +31,33 @@ body{
 }
 
 .item-name{
-    font-size:1.75rem;
+    font-size:1.31rem;
 }
 
 .item-description{
     color:#8B8B8B;
+    font-size:0.75rem;
 }
 
 .item-price{
-    font-size:1.25rem;
+    font-size:0.94rem;
 }
 
 .add-button{
     border:1.5px solid #DEDEDE;
     background-color: white;
     font-weight: 200;  
-    height:1.5625em;
-    width:1.5625em;
+    height:24px;
+    width:24px;
     border-radius: 50%;  
     margin:0;
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: "Inter", serif;
-    padding-bottom:0.25rem;
+    /* padding:0;  this shoudl remove default padding  */
+    padding:0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 } 
 
 .add-button:hover{
@@ -72,7 +78,7 @@ body{
 
 /* order */
 .order-title{
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     text-align: center;
     margin:0;
     margin-bottom:2.286em;
@@ -93,14 +99,14 @@ body{
 .order-summary{
     width:92%; /*550/600 = 92% */
     margin:0 auto;
-    padding: 1.875em 0; /*30:16=1.875*/
+    padding: 1.4em 0;
 }
 .remove-btn{
     margin:auto;
     background-color: white;
     border:none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.56rem;
     color:#BBBBBB;
     font-weight: 400;
 }
@@ -110,7 +116,7 @@ body{
     box-shadow: 0 1px 2px #0000000D;
     border:none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size:1em;
+    font-size:0.75em;
     font-weight: 700;
     color:#FFFFFF;
     padding:1.125em 0;/*18:16 = 1.125*/
@@ -119,8 +125,8 @@ body{
 
 /* modal */
 .modal-container{
-    width:32.75rem; /*524px*/
-    height:32.75rem;/*524px*/
+    width:300px; /*524px*/
+    height:300px;/*524px*/
     border:1.3 solid #757575;
     border-radius:4px;
     box-shadow:5px 5px 255px #00000080;
@@ -141,7 +147,7 @@ body{
 }
 .modal-heading{
     font-weight: 700;
-    font-size: 1.5rem; /*24/16 = 1.5rem*/
+    font-size: 12px; /*24/16 = 1.5rem*/
     margin:1.916em auto; /*46/24=1.916em*/
     text-align: center;
 }
@@ -151,9 +157,9 @@ body{
     border:1.3px solid #757575;
     border-radius:4px;
     padding:1.4em 0 1.4em 1.25em;/*28/20 = 1.4em, 25/20=1.25em*/
-    font-size:1.25rem; /*20/16 = 1.25rem*/
+    font-size:0.75rem; /*20/16 = 1.25rem*/
     box-sizing: border-box;
-    margin-bottom:1.15em;/*23/20=1.15em*/
+    margin-bottom:1em;/*23/20=1.15em*/
 
 }
 .modal-pay-btn{
@@ -161,7 +167,7 @@ body{
     background-color: #16DB99;
     border:none;
     color:white;
-    font-size: 1.25rem;/*20/16 = 1.25rem*/
+    font-size: 0.75rem;/*20/16 = 1.25rem*/
     padding:0.8em; /*16/20 =0.8em*/
     font-weight:700;
     border-radius:4px;
@@ -174,11 +180,78 @@ body{
     width:100%;
     border-radius:3px;
     text-align: center;
-    font-size:1.875rem ;/*30px*/
+    font-size:1.4rem ;/*22.4px*/
     color:#065F46;
     height:4em;
 }
 /* utilities */
 .hidden{
     display: none;
+}
+
+@media(min-width:768px){
+    body{
+        width:600px;
+    }
+    /* modal */
+    .modal-container{
+        width:524px; 
+        height:524px;
+    }
+
+    .modal-heading{
+        font-size: 1.5rem; /*24/16 = 1.5rem*/
+    }
+    .modal-input{
+        font-size:1.25rem; /*20/16 = 1.25rem*/
+        margin-bottom:1.15em;/*23/20=1.15em*/
+    
+    }
+    .modal-pay-btn{
+        font-size:1.25rem;/*20/16 = 1.25rem*/
+        margin-top:1.15em; /*23/20 =1.15em*/
+    }
+  /* item */
+    .add-button{
+        font-size: 2rem;
+        height:1.67em;
+        width:1.67em;
+    } 
+
+    .item-icon{
+        font-size:4.875rem;  
+    }
+
+    .item-name{
+        font-size:1.75rem;
+    }
+    
+    .item-description{
+        font-size:1rem;
+    }
+    
+    .item-price{
+        font-size:1.25rem;
+    }
+
+    /*order*/
+    .order-title{
+        font-size: 1.75rem;
+    }
+    .order-summary{
+        padding: 1.875em 0; /*30:16=1.875*/
+    }
+    .remove-btn{
+        font-size: 0.75rem;
+    }
+    .complete-order-btn{
+        font-size:1em;
+    }
+    /* message */
+    .message-container{
+        padding:1.67em 0; /*50/30=1.67em*/
+        border-radius:3px;
+        text-align: center;
+        font-size:1.875rem ;/*30px*/
+    }
 }
