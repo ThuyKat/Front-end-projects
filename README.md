@@ -54,3 +54,6 @@
 
 ![alt text](screenshots/restaurant-order-1.png)
 ![alt text](screenshots/restaurant-order-2.png)
+
+12. [Learning Journal](./Learning-journal/)
+[Link to application via Netlify](https://learning-journal-kat.netlify.app/)
