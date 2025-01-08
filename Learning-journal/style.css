@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Source Sans 3", serif;
+    height:100vh;
 }
 
 *{
@@ -63,15 +64,13 @@ nav li{
     left: 0;
     right: 0;
     color:white;
-    height:0;
+    height:auto;
     overflow: hidden;
     transition: .5s ease;
     margin:0 auto;
 }
 
-.hero article:hover .overlay-text{
-    height:auto;
-}
+
 
 /* =================
     Layout
@@ -127,8 +126,15 @@ nav li{
 }
 a{
     text-decoration: none;
+    color:black;
+}
+a:hover{
+    color:orange
 }
 
+date{
+    text-transform:uppercase;
+}
 .more-link{
     display:block;
     font-size: 1rem;
@@ -145,7 +151,7 @@ a{
 }
 
 .hero h2{
-    font-size:2rem; 
+    font-size:2.86rem; 
     font-weight: 700;
     line-height: 1.08;
     letter-spacing: -0.03em;
@@ -154,7 +160,7 @@ a{
 }
 
 .summary{
-    font-size: 1rem;
+    font-size: 1.43rem;
     font-weight: 400;
     line-height: 1.25;
     text-align: left;
@@ -169,7 +175,7 @@ a{
     font-weight:400;
 }
 .section h2{
-    font-size:1.5rem;
+    font-size:2.15rem;
     font-weight: 700;
     margin:0.375em auto;
 }
@@ -179,7 +185,10 @@ a{
 /* =================
    Images
    ================= */
-
+.page-logo img{
+    width:2.125em;
+    height:2.125em;
+}
 
 .feature-image{
     display:block;
@@ -190,10 +199,35 @@ a{
     margin-bottom:0.875em;
 }
 
+/* =================
+   Footer
+   ================= */
+footer{
+    background-color: #202020;
+    text-align: center;
+    padding:3.08em 0;
+    font-size:1em;   
+}
+
+footer p{
+    margin:0;
+}
+.trademark{
+    letter-spacing:-0.03em; 
+    font-weight:700;
+    color:#ECECEC;
+}
+.copyright{
+    font-weight:400;
+    color:#D7D7D7;
+}
 
 @media(min-width:768px){
     *{
         font-size:16px;
+    }
+    .page-logo p{
+        font-size:1.25rem;
     }
     .grid-container{
         display:grid;
@@ -216,6 +250,11 @@ a{
         right:23.44em;
         bottom:3.75em;
         margin:0;
+        height:0;
+    }
+
+    .hero article:hover .overlay-text{
+        height:auto;
     }
     .hero article{
         position:relative;
@@ -224,6 +263,20 @@ a{
 
     .site-header{
         height:11.8vh;
+    }
+
+    .hero h2{
+        font-size:2.5rem; 
+    }
+    .section h2{
+        font-size:1.5rem;
+    }
+
+    .summary{
+        font-size:1rem;
+    }
+    footer{
+        padding:2.3125em 0; 
     }
     
 }
