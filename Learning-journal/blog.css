@@ -54,7 +54,7 @@
     margin-bottom: 1.6875em;
    }
  
-   @media(min-width:786px){
+   @media(min-width:768px){
         body{
             background-color: #FAFAFA;
         }

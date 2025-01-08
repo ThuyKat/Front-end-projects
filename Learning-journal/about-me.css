@@ -42,7 +42,7 @@
 .intro-detail p{
     font-size:1.43rem;
 }
-@media(min-width:786px){
+@media(min-width:768px){
     .site-header-wrap{
         background-color:#FFFFFF
     }

@@ -9,7 +9,7 @@ The website consists of three main pages:
 - Individual blog post page
 - About me page
 
-View design: [Figma Design](https://www.figma.com/design/hE5klIn1AEQ9XWZWmurs7y/Learning-Journal%2FBlog?node-id=1-432&t=cQnm8FYLila3Q059-0)
+View design: [Figma Design](https://www.figma.com/design/kjCDdlLwB8LSRqNFSEG38N/Learning-Journal%2FBlog-(Copy)?node-id=0-1&p=f&t=4CcfEY0WgCnpumM3-0)
 
 ## Technical Implementation
 
