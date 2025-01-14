@@ -56,13 +56,15 @@
 ![alt text](screenshots/restaurant-order-2.png)
 
 12. [Learning Journal](./Learning-journal/)
+
 [Link to application via Netlify](https://learning-journal-kat.netlify.app/)
 ![alt text](screenshots/learning-J-1.png)
 ![alt text](screenshots/learning-J-2.png)
 ![alt text](screenshots/learning-J-3.png)
 
 13. [Color Scheme Generator- Color API](./color%20API/)
-[Link to application via Netlify]()
+
+[Link to application via Netlify](resonant-chimera-65cfd1.netlify.app)
 ![alt text](screenshots/color-generator.png)
 ![alt text](screenshots/color-scheme-generator-mobile.png)
 
