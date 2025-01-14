@@ -57,3 +57,11 @@
 
 12. [Learning Journal](./Learning-journal/)
 [Link to application via Netlify](https://learning-journal-kat.netlify.app/)
+![alt text](screenshots/learning-J-1.png)
+![alt text](screenshots/learning-J-2.png)
+![alt text](screenshots/learning-J-3.png)
+
+13. [Color Scheme Generator- Color API](./color%20API/)
+[Link to application via Netlify]()
+![alt text](screenshots/color-generator.png)
+
