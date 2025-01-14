@@ -64,4 +64,5 @@
 13. [Color Scheme Generator- Color API](./color%20API/)
 [Link to application via Netlify]()
 ![alt text](screenshots/color-generator.png)
+![alt text](screenshots/color-scheme-generator-mobile.png)
 
