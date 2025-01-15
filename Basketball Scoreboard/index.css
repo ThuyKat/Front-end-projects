@@ -1,75 +1,90 @@
-@font-face{
-    src:url("CursedTimer.ttf");
-    font-family:Cursed Timer ULiL;
+@font-face {
+  src: url("CursedTimer.ttf");
+  font-family: Cursed Timer ULiL;
+}
+* {
+  box-sizing: border-box;
+  font-size: 12px;
 }
 body {
-    margin: 0;
-    text-align:center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    padding-top:200px;
-    background-color:#9AABD8;
-    
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #9aabd8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction:row;
-    width:570px;
-    height:385px;
-    background-color: #1B244A;
-    margin:0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 56vw;
+  max-width: 716px;
+  min-width: 270px;
+  height: 64vh;
+  background-color: #1b244a;
+  margin: auto;
 }
 
-.score{
-    background-color: black;
-    color:#F94F6D;
-    font-family: Cursed Timer ULiL;
-    font-size: 90px;
-    font-weight: 400;
-    line-height: 127px; 
-    width:150px;
-    height:120px;
-    border-radius:5px;
-    margin-bottom:26px;
-    margin-top:20px;
+.score {
+  background-color: black;
+  color: #f94f6d;
+  font-family: Cursed Timer ULiL;
+  font-size: 5.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+  width: 1.67em;
+  height: 1.33em;
+  border-radius: 5px;
+  margin-bottom: 1.625rem;
+  margin-top: 1.25rem;
 }
 
-.title{
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 36px;
-    margin:0;
-    color:whitesmoke;
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 0.9;
+  margin: 0;
+  color: whitesmoke;
 }
 
-.btn-group{
-    display:flex;
-    justify-content: space-between;
-    
-    
+.btn-group {
+  display: flex;
+  justify-content: space-between;
 }
 
-.btn{
-    color:#9AABD8;
-    border:2px solid #9AABD8;
-    background-color: transparent;
-    border-radius:5px;
-    width:45px;
-    height:45px;
-    font-family:Cursed Timer ULiL ;
-    font-size:18px;
+.btn {
+  color: #9aabd8;
+  border: 2px solid #9aabd8;
+  background-color: transparent;
+  border-radius: 5px;
+  width: 2.5em;
+  height: 2.5em;
+  font-family: Cursed Timer ULiL;
+  font-size: 1.125rem;
+  margin:0;
+  padding:0;
 }
 
-#btn-reset{
-    background-color: #1B244A;
-    box-shadow: 5px 0px 5px #1B244A;
-    color:#9AABD8;
-    border-radius: 20%;
-    width:90px;
-    height:90px;
-    border:5px solid #F94F6D;
-    margin-top:20px;
-    
+#btn-reset {
+  background-color: #1b244a;
+  box-shadow: 5px 0px 5px #1b244a;
+  color: #9aabd8;
+  border-radius: 20%;
+  width: 5.635em;
+  height: 5.625em;
+  border: 5px solid #f94f6d;
+  margin-top: 1.5em;
+}
+
+@media (min-width: 768px) {
+  * {
+    font-size: 16px;
+  }
 }
