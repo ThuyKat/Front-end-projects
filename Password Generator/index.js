@@ -144,6 +144,25 @@ if (!options.symbols) {
 //password must be 15 character length
 generatePasswordEl.addEventListener("click", generatePassword);
 
+//copy to clipboard
+document.getElementById("password1").addEventListener("click",function(){copyToClipboard(this.textContent)})
+document.getElementById("password2").addEventListener("click",function(){copyToClipboard(this.textContent)})
+
+function copyToClipboard(text){
+    navigator.clipboard.writeText(text)
+    .then(() => {
+        alert('Copied password to clipboard',text);
+    })
+    .catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
+}
+function generatePassword() {
+  pass1El.textContent = generateRandomString();
+  passChars.length = 0;
+  pass2El.textContent = generateRandomString();
+  passChars.length = 0;
+}
 function generateRandomString() {
   console.log("generating password");
 
@@ -156,11 +175,4 @@ function generateRandomString() {
     passChars.push(targetChars[randomIndex]);
   }
   return passChars.join("");
-}
-
-function generatePassword() {
-  pass1El.textContent = generateRandomString();
-  passChars.length = 0;
-  pass2El.textContent = generateRandomString();
-  passChars.length = 0;
 }
