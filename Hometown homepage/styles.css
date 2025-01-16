@@ -1,76 +1,117 @@
+*{
+  box-sizing:border-box;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   margin: 0;
+  padding:0;
+  
 }
-#hero {
+.container{
+  min-width:400px;
+  margin:0 auto;
+}
+.hero {
+  margin:0 auto;
   background-image: url("assets2/hanoi.jpg");
   background-size: cover;
-  height: 450px;
+  background-position: 80% 0;
   color: #ffffff;
   font-weight: 700;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding:7em 0;
+  min-height:50vh;
+  width:100%;
 }
 
-#title {
+.hero h1 {
   background-color: #1d3557;
-  width: 225px;
+  padding:0.2em 0.5em;
   border-radius: 10px;
 }
 
-#description {
-  width: 400px;
+.slogan {
+  width: 90%;
+  max-width:500px;
   border-radius: 10px;
   background-color: #457b9d;
-  padding: 5px 28px;
-  margin: 0;
+  padding: 0.3em 1.75em;
+  margin: 0 auto;
 }
 
-#activities-section {
+.activities-section {
   background-color: #f1faee;
-  padding: 40px 30px;
+  padding: 2.5em 1.875em;
 }
 
-#title-activities {
-  margin-bottom: 50px;
+.title-activities {
+  margin-bottom: 3.125em;
   margin-top:0;
   padding:0;
 }
-#activity-wrapper {
+.activity-wrapper {
   display: flex;
   justify-content: space-around;
-  gap:30px;
+  gap:1.875em;
+  flex-direction: column;
 }
 
 .activity{
-    width:200px;
+    width:100%;
 }
-.activity-title{
-  height:45px;
-}
+
 .activity-img {
   border-radius: 50%;
-  width:100px;
-  height:100px;
+  width:50%;
+  aspect-ratio:1;
+  object-fit: cover;
 }
 .activity-description{
     margin-bottom: 0;
 }
-#card{
-    width:400px;
+.card{
+    max-width: fit-content;
     background-color: #A8DADC;
     border-radius: 10px;
     display: flex;
-    padding:20px 10px;
+    padding:1.5em 0.7em;
     margin:0 auto;
     border-bottom: 6px solid #1D3557;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width:200px;
 }
-#avatar{
-  width:150px;
+.card-description p{
+
+  margin:0 auto;
+  text-align: left;
 }
-#guide{
-    padding:50px;
+.card-description{
+  margin:0 auto;
+  padding:2em;
+  width:100%;
+  max-width:300px;
+}
+.avatar{
+  width:100%;
+  max-width:250px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.guide{
+    padding:3.125em;
+}
+
+@media (min-width:768px){
+  .activity-wrapper {
+    flex-direction: row;
+  }
+
+  .activity-img {
+    width:70%;
+  }
 }
