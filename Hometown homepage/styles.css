@@ -32,6 +32,7 @@ body {
   background-color: #1d3557;
   padding:0.2em 0.5em;
   border-radius: 10px;
+  font-size:3rem;
 }
 
 .slogan {
@@ -107,11 +108,12 @@ body {
 }
 
 @media (min-width:768px){
+  *{
+    font-size:20px;
+  }
   .activity-wrapper {
     flex-direction: row;
   }
-
-  .activity-img {
-    width:70%;
-  }
 }
+
+
