@@ -1,4 +1,6 @@
 # Front-end solo
+A collection of diverse web applications and clones showcasing front-end development skills.
+## Projects Overview
 
 14. [Movie Watchlist - OMDB API](./Movie%20Watchlist%20Apps/)
 
