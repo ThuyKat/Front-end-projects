@@ -1,0 +1,23 @@
+.add-movies{
+    display:flex;
+    align-items: center;
+    gap:5px;
+    color:white;
+    font-size:0.875rem;
+    justify-content: center;
+    width:100%;
+}
+.add-movies a{
+    text-decoration: none;
+    color:white;
+}
+.add-movies a:hover{
+    text-decoration: underline;
+}
+
+.movies{
+    color:white;
+    padding-top:1em;
+    
+}
+

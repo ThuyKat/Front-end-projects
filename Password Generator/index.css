@@ -67,6 +67,8 @@ hr {
   text-align: center;
   justify-content: space-between;
   margin-top: 2.1875em;
+  flex-wrap:wrap;
+  gap:0.5em;
 }
 
 .password {
@@ -74,9 +76,11 @@ hr {
   color: #55f991;
   height: 2.5em;
   min-width: 40%;
+  max-width: fit-content;
   line-height: 1;
   padding: 0.6em;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .customization {

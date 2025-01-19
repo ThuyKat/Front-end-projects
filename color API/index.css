@@ -18,7 +18,7 @@ layouts
 ======= */
 
 .container{
-    width:50%;
+    width:70%;
     background-color: #FFFDFE;
     box-shadow: 0px 1px 2px grey;
     margin:auto;
@@ -116,5 +116,8 @@ color output
     }
     .color{
         width:100%;
+    }
+    .container{
+        width:50%;  
     }
 }
