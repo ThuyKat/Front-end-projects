@@ -54,14 +54,14 @@ Main
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
     flex-grow: 1;
     min-width: 150px;
-    max-width: 400px;
+    max-width: 100%;
 
 }
 .new-ingredient-form > button{
     font-family: Inter, sans-serif;
     padding:0.8em 1.4em;
     border-radius:6px;
-    min-width:25%;
+    min-width:20%;
     background-color: #141413;
     color: #FAFAF8;
     font-size: 0.875rem;
@@ -102,4 +102,13 @@ Main
     font-family: Inter, sans-serif;
     font-size: 0.875rem;
     cursor: pointer;
+}
+.recipe-container {
+    color: #475467;
+    line-height: 28px;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+.recipe-container ul li,.recipe-container ol li{
+    margin-bottom: 0.5em;
 }

@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Ingredient from "./Ingredient";
+import getRecipeFromChefClaude from "../ai";
+import ReactMarkdown from "react-markdown";
+
 export default function Main() {
-  const[recipe,setRecipe] = useState("")
+  const [recipe, setRecipe] = useState("");
   const [ingredients, setIngredients] = useState([
     "chicken",
     "corn",
@@ -16,33 +19,41 @@ export default function Main() {
     setIngredients((prevIngredient) => [...prevIngredient, newIngredient]);
     // console.log(Object.fromEntries(formData));
   }
-  function getRecipe(){
-    setRecipe("this is recipe")
+  async function getRecipe() {
+    const recipeMd = await getRecipeFromChefClaude(ingredients);
+    setRecipe(recipeMd);
   }
 
   return (
     <main className="main-container">
-
       <form action={addIngredient} className="new-ingredient-form">
-        <input type="text" placeholder="e.g. oregano" name="new-ingredient" aria-label="Add ingredient" />
+        <input
+          type="text"
+          placeholder="e.g. oregano"
+          name="new-ingredient"
+          aria-label="Add ingredient"
+        />
         <button type="submit">+ Add ingredient</button>
       </form>
 
       <section>
-      <h2>Ingredients on hand</h2>
-      <div className="ingredients-container" aria-live="polite">
-        <ul>{ingredientList}</ul>
-      </div>
-      <div class="get-recipe-container">
-        <div>
+        <h2>Ingredients on hand</h2>
+       { ingredients.length>0 && <div className="ingredients-container" aria-live="polite">
+          <ul>{ingredientList}</ul>
+        </div>}
+        <div class="get-recipe-container">
+          <div>
             <h3>Ready for a recipe</h3>
             <p>Generate a recipe from your list of ingredients</p>
+          </div>
+          <button onClick={getRecipe}>Get a recipe</button>
         </div>
-        <button onClick={getRecipe}>Get a recipe</button>
-      </div>
-      <div class="recipe-container">
-            {recipe}
-      </div>
+        {recipe && (
+          <div class="recipe-container">
+            <h2>Chef Claude recommends:</h2>
+            <ReactMarkdown>{recipe}</ReactMarkdown>
+          </div>
+        )}
       </section>
     </main>
   );

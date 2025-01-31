@@ -1,6 +1,13 @@
 # Front-end solo
 A collection of diverse web applications and clones showcasing front-end development skills.
 ## Projects Overview
+15. [Chef Claude with HuggingFace AI](./ChefClaude%20Ai/)
+
+-**Technologies**: React, HuggingFace AI/Claude AI API, Netlify Serverless Function
+-**Features**: Input ingredients you have on hand, AI-generated recipes tailored to your ingredients
+-**Live Demo**: 
+[Link to application via Netlify](https://bucolic-donut-db52bd.netlify.app/)
+![alt text](screenshots/Chef-Clau.png)
 
 14. [Movie Watchlist - OMDB API](./Movie%20Watchlist%20Apps/)
 
