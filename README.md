@@ -1,6 +1,12 @@
 # Front-end solo
 A collection of diverse web applications and clones showcasing front-end development skills.
 ## Projects Overview
+16. [Tenzies Game](./Tenzies%20game/)
+- **Technologies**: React
+- **Features**: Roll the virtual dice and hold the ones you want to keep, while continuing to roll the remaining dice. Win the game by strategically holding dice until all show the same value, creating a challenging yet engaging game of chance and strategy.
+- **Live Demo**: 
+
+![alt text](screenshots/tenzies-game.png)
 15. [Chef Claude with HuggingFace AI](./ChefClaude%20Ai/)
 
 - **Technologies**: React, HuggingFace AI/Claude AI API, Netlify Serverless Function

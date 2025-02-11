@@ -1,0 +1,28 @@
+.circular-text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width:100px;
+    height:100px;
+    margin:0 auto;
+    overflow: hidden;
+    
+}
+@keyframes circular {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.circular-text-img{
+       width:100px;  
+       animation: circular 10s linear infinite;   
+}
+.arrow-img{
+    color:black;
+    position:absolute;
+    font-size:1.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+}
