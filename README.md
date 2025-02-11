@@ -5,7 +5,7 @@ A collection of diverse web applications and clones showcasing front-end develop
 - **Technologies**: React
 - **Features**: Roll the virtual dice and hold the ones you want to keep, while continuing to roll the remaining dice. Win the game by strategically holding dice until all show the same value, creating a challenging yet engaging game of chance and strategy.
 - **Live Demo**: 
-
+https://euphonious-speculoos-56e214.netlify.app/
 ![alt text](screenshots/tenzies-game.png)
 15. [Chef Claude with HuggingFace AI](./ChefClaude%20Ai/)
 
