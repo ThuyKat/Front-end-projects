@@ -21,7 +21,8 @@ A fun and interactive dice game built with React where players roll dice to matc
 - useRef and useEffect to access DOM nodes which allows focusing on button to start new game once game won
 
 ## 🎨 CSS Features
-- Grid layout for dice arrangement and dice styling
+- Grid layout for dice arrangement 
+- Style the dice to look like the real dice with pips instead of numbers using grid template areas
 - Flexbox for responsive centering
 - Interactive hover and click states
 - Responsive design

@@ -1,5 +1,5 @@
 import Dice from "./components/Dice"
-import { useState } from "react"
+import { useState, useRef,useEffect, use } from "react"
 import {nanoid} from "nanoid"
 import Confetti from 'react-confetti'
 import { useWindowSize } from 'react-use'
@@ -9,7 +9,7 @@ export default function App(){
     const { width, height } = useWindowSize()
      //game won when all dice has same value and all are held
      const gameWon  = dices.every(dice => dice.isHeld) && dices.every(dice => dice.value===dices[0].value)
-
+    const focusBtn = useRef(null)
     function generateAllNewDice(){
         return new Array(10).fill(0).map(el => 
             ({value: Math.ceil(Math.random()*6),
@@ -32,6 +32,9 @@ export default function App(){
         const newDices = dices.map(dice => dice.id===diceId?{...dice,isHeld:!dice.isHeld}:dice)
         setDices(newDices)
     }
+    useEffect(()=>{
+        focusBtn.current.focus()
+    },[gameWon])
    
     const diceElements = dices.map(dice => <Dice 
         key={dice.id}
@@ -50,7 +53,7 @@ export default function App(){
            <div className="dice-container">
                 {diceElements}
            </div>
-           <button className="roll-btn" onClick= {rollDice}>{gameWon? "New Game" :"Roll dice"}</button>
+           <button ref={focusBtn} className="roll-btn" onClick= {rollDice}>{gameWon? "New Game" :"Roll dice"}</button>
         </main>
     )
 }
