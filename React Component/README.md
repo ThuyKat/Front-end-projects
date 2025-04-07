@@ -454,3 +454,118 @@ div.polygon {
 ```
 - Problem: Tooltip shadow covers polygon shadow due to stacking context
 - Solution: Move tooltip shadow to pseudo-element with lower z-index than polygon
+# CSS variable Learning Notes
+
+## Basic Usage
+
+```css
+:root {
+  /* Define variables at the root level */
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #333;
+  --spacing-unit: 8px;
+  --font-family: 'Roboto', sans-serif;
+  --border-radius: 4px;
+  --transition-speed: 0.3s;
+}
+
+/* Using the variables */
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  transition: background-color var(--transition-speed) ease;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* You can also redefine variables for specific sections */
+.dark-theme {
+  --primary-color: #2980b9;
+  --secondary-color: #27ae60;
+  --text-color: #f5f5f5;
+}
+
+/* And use them with calculations */
+.container {
+  margin: calc(var(--spacing-unit) * 3);
+  padding: calc(var(--spacing-unit) * 2);
+  border: 1px solid var(--primary-color);
+}
+```
+
+## Benefits of CSS Variables
+
+1. Allow you to maintain consistent values throughout your stylesheet
+2. Enable easy theme switching (like light/dark mode)
+3. Support runtime changes via JavaScript
+4. Can be manipulated with calculations using calc()
+5. Cascade through the DOM, so you can override them for specific sections
+
+## Modifying CSS Variables with JavaScript
+
+```javascript
+// Get a CSS variable value
+const primaryColor = getComputedStyle(document.documentElement)
+  .getPropertyValue('--primary-color');
+
+// Set a CSS variable value
+document.documentElement.style.setProperty('--primary-color', '#e74c3c');
+```
+
+This makes it much easier to maintain consistent styling across large applications and implement features like theme switching.
+
+## Using CSS Variables with React Components
+
+Here's a practical example of using CSS variables in a React component to create a themeable tooltip:
+
+```jsx
+export default function Tooltip({children, style, color}) {
+    // Dynamically access CSS variables based on props
+    let textColor = `var(--light-tooltip-${color})`
+    let backgroundColor = `var(--bold-tooltip-${color})`
+    
+    // Switch colors if style is 'light'
+    if(style === 'light') {
+        [textColor, backgroundColor] = [backgroundColor, textColor]
+    }
+    
+    // Create styles object using the variables
+    const styles = {
+        color: textColor,
+        backgroundColor: backgroundColor
+    }
+    
+    return (
+        <div style={styles} className={`tooltip ${style}`}>
+            {children}
+        </div>
+    )
+}
+```
+
+This approach allows for:
+
+1. **Dynamic styling** - The tooltip's appearance changes based on the `color` and `style` props
+2. **Consistent theming** - All tooltips use the same set of predefined CSS variables
+3. **Easy maintenance** - Color themes can be updated by changing the CSS variables in one place
+4. **Flexibility** - The component can swap background/text colors based on the style prop
+
+The corresponding CSS would have variables defined like:
+
+```css
+:root {
+  --light-tooltip-blue: #E0E7FF;
+  --bold-tooltip-blue: #1E40AF;
+  --light-tooltip-green: #E7FFF3;
+  --bold-tooltip-green: #47AA5D;
+  /* More color variations */
+}
+```
+
+This pattern creates a consistent, maintainable system for component styling.
