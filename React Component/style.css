@@ -1,0 +1,175 @@
+body{
+    font-family:'Inter UI', 'Segoe UI', 'Noto Sans', 'Liberation Sans', 'Arial', sans-serif;
+    font-weight: 500;
+    font-size:14px;
+    line-height: 1.5;
+}
+:root{
+    --grey:#1F2937;
+    --grey-light:#F3F4F6;
+    --red:#991B1B;
+    --red-light:#FEE2E2;
+    --yellow:#92400E;
+    --yellow-light:#FEF3C7;
+    --green:#065F46;
+    --green-light:#D1FAD5;
+    --blue:#1E40AF;
+    --blue-light:#DBEAFE;
+    --indigo:#3730A3;
+    --indigo-light:#E0E7FF;
+    --purple:#5B21B6;
+    --purple-light:#EDE9FE;
+    --pink:#9D174D;
+    --pink-light:#FCE7F3;
+    --bold-tooltip-black:#262626;
+    --light-tooltip-black:#FFFFFF;
+    --bold-tooltip-blue:var(--blue);
+    --light-tooltip-blue:#E0E7FF;
+    --bold-tooltip-pink:#A9229B;
+    --light-tooltip-pink:#FFF3FC;
+    --bold-tooltip-green:#47AA5D;
+    --light-tooltip-green:#E7FFF3;
+   
+}
+
+h1{
+    font-family:'permanent marker', 'Segoe UI', 'Noto Sans', 'Liberation Sans', 'Arial', sans-serif;
+}
+button{
+    width:67px;
+    height:24px;
+    padding:2px 12px 2px 12px;
+    border:none;
+}
+button.square{
+    border-radius: 4px;  
+}
+button.pill{
+    border-radius:12px;
+}
+div.badges{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top:1em;
+}
+.grey{
+    background-color: var(--grey-light);
+    color: var(--grey);
+}
+.red{
+    background-color: var(--red-light);
+    color: var(--red);
+}
+.yellow{
+    background-color: var(--yellow-light);
+    color: var(--yellow);
+}
+.green{
+    background-color: var(--green-light);
+    color: var(--green);
+}
+.blue{
+    background-color: var(--blue-light);
+    color: var(--blue);
+}
+.indigo{
+    background-color: var(--indigo-light);
+    color: var(--indigo);
+}
+.purple{
+    background-color: var(--purple-light);
+    color: var(--purple);
+}
+.pink{
+    background-color: var(--pink-light);
+    color: var(--pink);
+}
+
+/* Banner */
+.banner{
+    border-radius:6px;
+    padding:16px;
+    margin-bottom:1em;
+    display:flex;
+    gap:10px;
+}
+.single{
+    width:50%;
+ 
+}
+.multiple{
+    width:fit-content;
+    line-height:1;
+    align-items: baseline;
+}
+.success{
+    color:var(--green);
+    background-color: var(--green-light);
+}
+.warning{
+    color:var(--yellow);
+    background-color: var(--yellow-light);
+}
+.error{
+    color:var(--red);
+    background-color: var(--red-light);
+}
+.neutral{
+    color:var(--blue);
+    background-color: var(--blue-light);
+}
+/* tooltips */
+.tooltip{
+    display:flex;
+    width:384px;
+    border-radius:8px;
+    padding:16px;
+    gap:16px;
+    line-height: 1.5;
+    position:relative;
+    margin-bottom:2em;
+}
+.tooltip *{
+    background-color: inherit;
+}
+.tooltip img{
+    margin-top:4px;
+}
+
+.tooltip .content p{
+    margin:0;
+}
+.tooltip::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius:8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    z-index: -2; 
+    /* the problem is because tooltip has shadow over polygon, now we make polygon shadow over the layer above tooltip while the content still above at it default z=0 */
+}
+div.polygon{
+    width: 34px;
+    height: 34px;
+    transform: rotate(45deg) translateY(-55%) translateX(-35%) ;
+    position:absolute;
+    top:100%; 
+    z-index: -1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+}
+.section-tooltip{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-flow: column;
+}
+.tooltip.bold{
+    grid-column:1;
+}
+.tooltip.light{
+    grid-column:2;
+}
