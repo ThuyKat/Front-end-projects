@@ -4,6 +4,8 @@ import Badge from './components/Badge'
 import Banner from './components/Banner'
 import Tooltip from './components/Tooltip'
 import icon from './assets/icon.png'
+import profilePhoto from './assets/profile-photo.jpeg'
+import Testimonial from "./components/Testimonial"
 import './style.css'
 export default function App(){
     return (
@@ -109,10 +111,10 @@ export default function App(){
                 <div>
                     <img src={icon} alt="icon" />
                 </div>
-                <div class="content">
+                <div className="content">
                     <p><strong>Archive notes</strong></p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.</p>
-                    <div class='polygon'>
+                    <div className='polygon'>
                     </div>
                 </div>
                 x
@@ -124,10 +126,10 @@ export default function App(){
                 <div>
                     <img src={icon} alt="icon" />
                 </div>
-                <div class="content">
+                <div className="content">
                     <p><strong>Archive notes</strong></p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.</p>
-                    <div class='polygon'>
+                    <div className='polygon'>
                     </div>
                 </div>
                 x
@@ -136,10 +138,10 @@ export default function App(){
                 <div>
                     <img src={icon} alt="icon" />
                 </div>
-                <div class="content">
+                <div className="content">
                     <p><strong>Archive notes</strong></p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.</p>
-                    <div class='polygon'>
+                    <div className='polygon'>
                     </div>
                 </div>
                 x
@@ -148,10 +150,10 @@ export default function App(){
                 <div>
                     <img src={icon} alt="icon" />
                 </div>
-                <div class="content">
+                <div className="content">
                     <p><strong>Archive notes</strong></p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.</p>
-                    <div class='polygon'>
+                    <div className='polygon'>
                     </div>
                 </div>
                 x
@@ -160,10 +162,10 @@ export default function App(){
                 <div>
                     <img src={icon} alt="icon" />
                 </div>
-                <div class="content">
+                <div className="content">
                     <p><strong>Archive notes</strong></p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.</p>
-                    <div class='polygon'>
+                    <div className='polygon'>
                     </div>
                 </div>
                 x
@@ -172,10 +174,10 @@ export default function App(){
                 <div>
                     <img src={icon} alt="icon" />
                 </div>
-                <div class="content">
+                <div className="content">
                     <p><strong>Archive notes</strong></p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.</p>
-                    <div class='polygon'>
+                    <div className='polygon'>
                     </div>
                 </div>
                 x
@@ -184,10 +186,10 @@ export default function App(){
                 <div>
                     <img src={icon} alt="icon" />
                 </div>
-                <div class="content">
+                <div className="content">
                     <p><strong>Archive notes</strong></p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.</p>
-                    <div class='polygon'>
+                    <div className='polygon'>
                     </div>
                 </div>
                 x
@@ -196,14 +198,23 @@ export default function App(){
                 <div>
                     <img src={icon} alt="icon" />
                 </div>
-                <div class="content">
+                <div className="content">
                     <p><strong>Archive notes</strong></p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.</p>
-                    <div class='polygon'>
+                    <div className='polygon'>
                     </div>
                 </div>
                 x
             </Tooltip>
+            </div>
+            <h1>Testimonials</h1>
+                <div className='testimoni'>
+                <div className='desktop'>
+                    <Testimonial photo={profilePhoto}/>  
+                </div>
+                <div className='mobile'>
+                    <Testimonial photo={profilePhoto}/>
+                </div>
             </div>
         </>
     )
