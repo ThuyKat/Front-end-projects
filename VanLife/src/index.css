@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  display:flex;
+  flex-direction: column;
+}
+nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff7ed;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+}
+nav h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+main {
+  background-image: url("./assets/image-bg.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 65px 27px;
+}
+main > div {
+  max-width: 80%;
+  margin: 0 auto;
+}
+main button {
+  background-color: #ff8c38;
+  color: inherit;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+/* About */
+.about .content-container {
+  background-color: #fff7ed;
+  color: #161616;
+  padding: 50px 27px;
+}
+.about .content-container .action {
+  background-color: #ffcc8d;
+  padding: 32px 37px;
+  border-radius: 5px;
+}
+.about .content-container .action p {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0%;
+  margin: 0;
+}
+.about .content-container .action button {
+  background-color: #161616;
+  color: #ffffff;
+  width: 174px;
+  height: 49px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+footer {
+  width: 100%;
+  height: 74.75px;
+  background-color: #252525;
+  color: #aaaaaa;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
