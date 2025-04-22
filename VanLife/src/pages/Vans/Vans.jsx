@@ -24,7 +24,24 @@ export default function Vans() {
         setLoading(false);
       });
   }, []);
-
+  const vansElements = vans.map((van) => (
+    <Link to={`/vans/${van.id}`} key={van.id} 
+    aria-label={`View details for ${van.name}, 
+    priced at $${van.price} per day`}>
+      <div className="van-card">
+        <img src={van.imageUrl} alt={`Image of ${van.name}`} />
+        <div className="van-info">
+          <p>
+              {van.name} 
+              <span>${van.price}</span>
+          </p>
+          <p className="text-small">/day</p>
+          
+        </div>
+          <p className={`van-type ${van.type}`}>{van.type}</p>
+      </div>
+    </Link>
+  ))
   return (
     <div className="vans-parent-container">
       <h1>Explore our van options</h1>
@@ -33,22 +50,7 @@ export default function Vans() {
         {error && <h2>{error.message}</h2>}
         {!loading && !error && (
           <div className="vans-list">
-            {vans.map((van) => (
-              <Link to={`/vans/${van.id}`} key={van.id}>
-                <div className="van-card">
-                  <img src={van.imageUrl} alt={van.name} />
-                  <div className="van-info">
-                    <p>
-                        {van.name} 
-                        <span>${van.price}</span>
-                    </p>
-                    <p className="text-small">/day</p>
-                    
-                  </div>
-                    <p className={`van-type ${van.type}`}>{van.type}</p>
-                </div>
-              </Link>
-            ))}
+            {vansElements}
           </div>
         )}
       </div>

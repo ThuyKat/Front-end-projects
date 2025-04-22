@@ -1,30 +1,46 @@
-
-import './App.css'
-import { BrowserRouter,Routes, Route } from 'react-router-dom'
-import Home from './pages/Home'
-import Nav from './pages/Nav'
-import About from './pages/About'
-import Footer from './pages/Footer'
-import Vans from './pages/Vans'
-import VanDetails from './pages/VanDetails'
-import "./server"
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Vans from "./pages/Vans/Vans";
+import VanDetails from "./pages/Vans/VanDetails";
+import "./server";
+import Layout from "./components/Layout";
+import HostLayout from "./components/HostLayout";
+import Dashboard from "./pages/Host/Dashboard";
+import Income from "./pages/Host/Income";
+import Reviews from "./pages/Host/Reviews";
+import HostVans from "./pages/Host/HostVans";
+import HostVanDetails from "./pages/Host/HostVanDetails/HostVanDetails";
+import HostVanDetailsInfo from "./pages/Host/HostVanDetails/HostVanDetailsInfo";
+import HostVanDetailsPhotos from "./pages/Host/HostVanDetails/HostVanDetailsPhotos";
+import HostVanDetailsPricing from "./pages/Host/HostVanDetails/HostVanDetailsPricing";
 function App() {
-
   return (
     <>
-    <BrowserRouter>
-      
-      <Nav/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/vans" element={<Vans/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/vans/:id" element={<VanDetails/>}/>
-      </Routes>
-      <Footer/>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="vans" element={<Vans />} />
+            <Route path="vans/:id" element={<VanDetails />} />
+            <Route path="host" element={<HostLayout />}>
+              <Route index element={<Dashboard />} />
+              <Route path="income" element={<Income />} />
+              <Route path="reviews" element={<Reviews />} />
+              <Route path="vans" element={<HostVans />} />
+              <Route path="vans/:id" element={<HostVanDetails />} >
+                <Route index element={<HostVanDetailsInfo/>}/>
+                <Route path="pricing" element={<HostVanDetailsPricing/>} />
+                <Route path="photos" element={<HostVanDetailsPhotos/>} />
+              </Route>
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
