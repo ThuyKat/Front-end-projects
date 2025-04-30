@@ -6,6 +6,7 @@ export default function Vans() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams);
   const typeFilter = searchParams.get("type");
   useEffect(() => {
     fetch("/api/vans")
@@ -32,6 +33,7 @@ export default function Vans() {
   const vansElements = filteredVans.map((van) => (
     <Link
       to={van.id}
+      state={{search: searchParams.toString()}}
       key={van.id}
       aria-label={`View details for ${van.name}, 
     priced at $${van.price} per day`}
