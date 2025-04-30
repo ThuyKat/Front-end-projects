@@ -23,6 +23,7 @@ export default function Vans() {
       })
       .catch((error) => {
         setError(error);
+      }).finally(() => {
         setLoading(false);
       });
   }, []);
@@ -62,6 +63,12 @@ export default function Vans() {
       return params;
     });
   };
+  if(loading) {
+    return <h1>Loading...</h1>;
+  }
+  if(error) {
+    return <h1>{error.message}</h1>;
+  }
   return (
     <div className="vans-parent-container">
       <h1>Explore our van options</h1>

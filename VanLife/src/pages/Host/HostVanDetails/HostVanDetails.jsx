@@ -20,8 +20,9 @@ export default function HostVanDetails() {
       })
       .catch((err) => {
         setError(err.message);
+      }).finally(() => {  
         setLoading(false);
-      });
+      })
   }, [params.id])
   const activeStyles = {
     fontWeight: "bold",
@@ -30,6 +31,9 @@ export default function HostVanDetails() {
   }
   if(loading){
     return <h2>Loading...</h2>
+  }
+  if(error){
+    return <h2>{error}</h2>
   }
   return (
     <>

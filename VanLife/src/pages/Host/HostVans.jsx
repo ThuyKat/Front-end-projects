@@ -18,6 +18,7 @@ export default function HostVans(){
             })
             .catch(err => {
                 setError(err.message)
+            }).finally(() => {
                 setLoading(false)
             })
     }, [])
@@ -34,6 +35,12 @@ export default function HostVans(){
             </Link>
         )
     })
+    if(loading){
+        return <h2>Loading...</h2>
+    }
+    if(error){
+        return <h2>{error}</h2>
+    }
     return(
         <div className='host-vans-container'>
             <h1>Your listed vans</h1>

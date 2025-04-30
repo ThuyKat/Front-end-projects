@@ -4,6 +4,7 @@ export default function VanDetails() {
   const { id } = useParams();
   const [van, setVan] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const location= useLocation();
   useEffect(() => {
     fetch(`/api/vans/${id}`)
@@ -20,11 +21,16 @@ export default function VanDetails() {
       })
       .catch((err) => {
         console.log(err);
+        setError(err);
+      }).finally(() => {
         setLoading(false);
       });
   }, [id]);
   if (loading) {
     return <h1>Loading...</h1>;
+  }
+  if(error){
+    return <h1>There was an error: {error.message}</h1>
   }
   return (
     <div className="van-detail-container">
