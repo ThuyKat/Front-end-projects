@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import PageNotFound from "./pages/PageNotFound";
 import Vans from "./pages/Vans/Vans";
 import VanDetails from "./pages/Vans/VanDetails";
 import "./server";
@@ -30,12 +31,13 @@ function App() {
               <Route path="income" element={<Income />} />
               <Route path="reviews" element={<Reviews />} />
               <Route path="vans" element={<HostVans />} />
-              <Route path="vans/:id" element={<HostVanDetails />} >
-                <Route index element={<HostVanDetailsInfo/>}/>
-                <Route path="pricing" element={<HostVanDetailsPricing/>} />
-                <Route path="photos" element={<HostVanDetailsPhotos/>} />
+              <Route path="vans/:id" element={<HostVanDetails />}>
+                <Route index element={<HostVanDetailsInfo />} />
+                <Route path="pricing" element={<HostVanDetailsPricing />} />
+                <Route path="photos" element={<HostVanDetailsPhotos />} />
               </Route>
             </Route>
+            <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>

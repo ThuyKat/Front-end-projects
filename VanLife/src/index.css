@@ -334,5 +334,17 @@ footer {
   border-radius: 5px;
 }
 
+.not-found-container {
+  padding:45px 26px;
+}
 
+.not-found-container .link-button {
+  display:block;
+  text-align: center;
+  padding:10px 0;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #161616;
+  color: white;
+}
 
