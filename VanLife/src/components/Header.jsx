@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom'
+import { CgProfile } from "react-icons/cg";
 export default function Header(){
     return(
         <header>
@@ -14,6 +15,11 @@ export default function Header(){
                     </li>
                     <li>
                         <Link to="/host">Host</Link>
+                    </li>
+                    <li>
+                        <Link to="/login">
+                            <p style={{ display: "flex", alignItems: "baseline",fontSize:"1.2rem",fontWeight:"600"}}><CgProfile /></p>
+                        </Link>
                     </li>
                 </ul>
             </nav>

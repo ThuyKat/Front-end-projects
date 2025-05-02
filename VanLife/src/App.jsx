@@ -16,6 +16,7 @@ import HostVanDetails from "./pages/Host/HostVanDetails/HostVanDetails";
 import HostVanDetailsInfo from "./pages/Host/HostVanDetails/HostVanDetailsInfo";
 import HostVanDetailsPhotos from "./pages/Host/HostVanDetails/HostVanDetailsPhotos";
 import HostVanDetailsPricing from "./pages/Host/HostVanDetails/HostVanDetailsPricing";
+import Login from "./pages/Login"
 function App() {
   return (
     <>
@@ -26,6 +27,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="vans" element={<Vans />} />
             <Route path="vans/:id" element={<VanDetails />} />
+            <Route path="login" element={<Login/>} />
             <Route path="host" element={<HostLayout />}>
               <Route index element={<Dashboard />} />
               <Route path="income" element={<Income />} />
