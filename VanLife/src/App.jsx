@@ -28,15 +28,17 @@ function App() {
             <Route path="vans" element={<Vans />} />
             <Route path="vans/:id" element={<VanDetails />} />
             <Route path="login" element={<Login/>} />
-            <Route path="host" element={<HostLayout />}>
-              <Route index element={<Dashboard />} />
-              <Route path="income" element={<Income />} />
-              <Route path="reviews" element={<Reviews />} />
-              <Route path="vans" element={<HostVans />} />
-              <Route path="vans/:id" element={<HostVanDetails />}>
-                <Route index element={<HostVanDetailsInfo />} />
-                <Route path="pricing" element={<HostVanDetailsPricing />} />
-                <Route path="photos" element={<HostVanDetailsPhotos />} />
+            <Route element={<AuthRequired/>}>
+              <Route path="host" element={<HostLayout />}>
+                <Route index element={<Dashboard />} />
+                <Route path="income" element={<Income />} />
+                <Route path="reviews" element={<Reviews />} />
+                <Route path="vans" element={<HostVans />} />
+                <Route path="vans/:id" element={<HostVanDetails />}>
+                  <Route index element={<HostVanDetailsInfo />} />
+                  <Route path="pricing" element={<HostVanDetailsPricing />} />
+                  <Route path="photos" element={<HostVanDetailsPhotos />} />
+                </Route>
               </Route>
             </Route>
             <Route path="*" element={<PageNotFound />} />

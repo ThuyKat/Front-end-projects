@@ -1,6 +1,11 @@
-import {Link} from 'react-router-dom'
+import {Link,NavLink} from 'react-router-dom'
 import { CgProfile } from "react-icons/cg";
 export default function Header(){
+    const activeStyles = {
+        fontWeight: "bold",
+        textDecoration: "underline",
+        color: "#161616"
+    }
     return(
         <header>
             <nav>
@@ -8,18 +13,18 @@ export default function Header(){
                 <ul>
                     
                     <li>
-                        <Link to="/about">About</Link>
+                        <NavLink to="/about" style={({isActive}) => isActive ? activeStyles : null} >About</NavLink>
                     </li>
                     <li>
-                        <Link to="/vans">Vans</Link>
+                        <NavLink to="/vans"  style={({isActive}) => isActive ? activeStyles : null}>Vans</NavLink>
                     </li>
                     <li>
-                        <Link to="/host">Host</Link>
+                        <NavLink to="/host" style={({isActive}) => isActive ? activeStyles : null}>Host</NavLink>
                     </li>
                     <li>
-                        <Link to="/login">
+                        <NavLink to="/login" style={({isActive}) => isActive ? activeStyles : null}>
                             <p style={{ display: "flex", alignItems: "baseline",fontSize:"1.2rem",fontWeight:"600"}}><CgProfile /></p>
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
