@@ -17,6 +17,7 @@ import HostVanDetailsInfo from "./pages/Host/HostVanDetails/HostVanDetailsInfo";
 import HostVanDetailsPhotos from "./pages/Host/HostVanDetails/HostVanDetailsPhotos";
 import HostVanDetailsPricing from "./pages/Host/HostVanDetails/HostVanDetailsPricing";
 import Login from "./pages/Login"
+import AuthRequired from "./components/AuthRequired";
 function App() {
   return (
     <>

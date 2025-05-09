@@ -1,7 +1,10 @@
 import {useState} from "react"
-
+import {useLocation} from "react-router-dom"
+import {loginUser} from "../api"
 
 export default function Login() {
+const location = useLocation()
+console.log(location)
 const [formData,setFormData] = useState({
     email:"",
     password:""
@@ -16,11 +19,14 @@ const handleInputChange=(e)=>{
     })  
 }
 const handleSubmit= async(formData)=>{
-    console.log(formData.get("email"))
-    console.log(formData.get("password"))
+    const loginData = Object.fromEntries(formData)
+    console.log("loginData",loginData)
+    loginUser(loginData).then(data => console.log(data))
+
 }
   return (
     <div className="login-container">
+        {location.state?.message && <h3 className="error-message">{location.state.message}</h3>}
         <h1>Sign in to your account</h1>
         <form action={handleSubmit}>
             <div className="input-group">
