@@ -3,6 +3,7 @@ import {useLocation} from "react-router-dom"
 import {loginUser} from "../api"
 
 export default function Login() {
+const [state, setState] = useState("idle")
 const location = useLocation()
 console.log(location)
 const [formData,setFormData] = useState({
