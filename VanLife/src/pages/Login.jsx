@@ -32,7 +32,7 @@ const handleSubmit= async(formData)=>{
         console.log(data)
         if(data.status === 200){
             setError(null)
-            navigate("/home")
+            navigate("/host", {replace:true})
         }
     
     }).catch(err=>setError(err))
