@@ -4,9 +4,13 @@ import { languages } from "../languages";
 import Input from "./Input";
 import Letter from "./Letter";
 export default function Main() {
-  const guessWord = "hello";
+  const [guessWord, setGuessWord] = useState("Hello");
   const [guesses, setGuesses] = useState([]);
 
+  function generateNewGame() {
+    setGuessWord("Hello");
+    setGuesses([]);
+  }
   const wrongGuessesCount = guesses.filter(
     (char) => !guessWord.includes(char)
   ).length;
@@ -76,7 +80,9 @@ export default function Main() {
       <section className="languages-container">{languagesEl}</section>
       <section className="word-container">{inputWordEl}</section>
       <section className="keyboard">{keyboardEl}</section>
-      <button className="main-btn">New Game</button>
+      <button className="main-btn" onClick={generateNewGame}>
+        New Game
+      </button>
     </main>
   );
 }
