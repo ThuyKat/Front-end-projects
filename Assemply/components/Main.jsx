@@ -6,13 +6,16 @@ import Letter from "./Letter";
 export default function Main() {
   const guessWord = "hello";
   const [guesses, setGuesses] = useState([]);
+
   const wrongGuessesCount = guesses.filter(
     (char) => !guessWord.includes(char)
   ).length;
   const inputChars = guessWord
     .split("")
     .map((char) => ({ value: char, isShown: false }));
-
+  const gameWon =
+    wrongGuessesCount <= 8 && inputChars.every((charObj) => charObj.isShown);
+  const gameOver = wrongGuessesCount >= 8 || gameWon;
   // coding langauges
   const languagesEl = languages.map((lang, index) => {
     const isGone = index < wrongGuessesCount ? true : false;
@@ -30,7 +33,7 @@ export default function Main() {
   // guess word
   const inputWordEl = inputChars.map((charObj, index) => {
     const isShown =
-      guesses.includes(charObj.value) && !wrongGuesses.includes(charObj.value);
+      guesses.includes(charObj.value) && guessWord.includes(charObj.value);
     return <Input key={index} char={charObj.value} isShown={isShown} />;
   });
   //click on to a char -> check if char is included in guess word --> reveal guessword+ change background color of char to green --> if not color of char is changed to red + one language is crossed out + display farewell message
@@ -52,7 +55,7 @@ export default function Main() {
         id={index}
         letter={letter.toUpperCase()}
         onClick={(e) => handleLetterClick(letter, e)}
-        isWrong={wrongGuesses.includes(letter)}
+        isWrong={guessWord.includes(letter)}
         isGuessed={guesses.includes(letter)}
       />
     ));
@@ -65,9 +68,11 @@ export default function Main() {
           from Assembly!
         </p>
       </header>
-      <section className="game-status">
-        <p>"Farewell "</p>
-      </section>
+      {gameOver && (
+        <section className="game-status">
+          <p>{gameWon ? "You win" : "Farewell "}</p>
+        </section>
+      )}
       <section className="languages-container">{languagesEl}</section>
       <section className="word-container">{inputWordEl}</section>
       <section className="keyboard">{keyboardEl}</section>
