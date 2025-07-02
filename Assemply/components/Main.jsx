@@ -29,14 +29,9 @@ export default function Main() {
   });
   // guess word
   const inputWordEl = inputChars.map((charObj, index) => {
-    if (
-      guesses.includes(charObj.value) &&
-      !wrongGuesses.includes(charObj.value)
-    ) {
-      return <Input key={index} char={charObj.value} isShown={true} />;
-    } else {
-      return <Input key={index} char={charObj.value} isShown={false} />;
-    }
+    const isShown =
+      guesses.includes(charObj.value) && !wrongGuesses.includes(charObj.value);
+    return <Input key={index} char={charObj.value} isShown={isShown} />;
   });
   //click on to a char -> check if char is included in guess word --> reveal guessword+ change background color of char to green --> if not color of char is changed to red + one language is crossed out + display farewell message
   function handleLetterClick(char) {
