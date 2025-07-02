@@ -5,50 +5,55 @@ import Input from "./Input";
 import Letter from "./Letter";
 export default function Main() {
   const guessWord = "hello";
-  const [inputChars, setInputChars] = useState(() => getGuessChars());
-  const [allLanguages, setAllLanguages] = useState(languages);
-  const [countIsGone, setCountIsGone] = useState(0);
-  function getGuessChars() {
-    return guessWord.split("").map((char) => ({ value: char, isShown: false }));
-  }
+  const [guesses, setGuesses] = useState([]);
+  const [wrongGuesses, setWrongGuesses] = useState([]);
+  const wrongGuessesCount = wrongGuesses.length;
+  const inputChars= guessWord.split("").map((char) => ({ value: char, isShown: false }));
+  
   // coding langauges
-  const languagesEl = allLanguages.map((lang) => (
-    <Language
-      key={lang.id}
-      name={lang.name}
-      color={lang.color}
-      backgroundColor={lang.backgroundColor}
-      isGone={lang.isGone}
-    />
-  ));
+  const languagesEl = languages.map((lang,index) => {
+    if(index < wrongGuessesCount){
+      return (
+        <Language
+          key={lang.id}
+          name={lang.name}
+          color={lang.color}
+          backgroundColor={lang.backgroundColor}
+          isGone={true}
+        />
+      )
+  }else{
+    return (
+      <Language
+        key={lang.id}
+        name={lang.name}
+        color={lang.color}
+        backgroundColor={lang.backgroundColor}
+        isGone={false}
+      />
+    );
+  }});
   // guess word
-  const inputWordEl = inputChars.map((charObj, index) => (
-    <Input key={index} char={charObj.value} isShown={charObj.isShown} />
-  ));
+  const inputWordEl = inputChars.map((charObj, index) => {
+    if(guesses.includes(charObj.value)&& !wrongGuesses.includes(charObj.value)){
+      return (<Input key={index} char={charObj.value} isShown={true} />)
+    }else{
+      return (<Input key={index} char={charObj.value} isShown={false} />)
+    }});
   //click on to a char -> check if char is included in guess word --> reveal guessword+ change background color of char to green --> if not color of char is changed to red + one language is crossed out + display farewell message
   function handleLetterClick(char, event) {
+
     const inputCharsValue = inputChars.map(
       (inputCharObj) => inputCharObj.value
     );
-    if (inputCharsValue.includes(char)) {
-      //set new state for inputChars
-      const newInputChar = inputChars.map((charObj) =>
-        charObj.value === char ? { ...charObj, isShown: true } : charObj
-      );
-      setInputChars(newInputChar);
-      //change background color of char
-      event.target.style.backgroundColor = "green"
-    } else {
-      //change background color of char
-      event.target.style.backgroundColor = "red"
-      //cross out one coding language
-      setAllLanguages((prevLang) =>
-        prevLang.map((el, index) =>
-          index === countIsGone ? { ...el, isGone: true } : el
-        )
-      )
-      setCountIsGone((prevCount) => prevCount + 1)
+    if (!inputCharsValue.includes(char)) {
+      // if char is not included in guess word
+      setWrongGuesses((prevWrongGuesses) => [
+        ...prevWrongGuesses,
+        char
+      ]);      
     }
+    setGuesses((prevGuesses) => [...prevGuesses, char]);
   }
   /*
   Comment: 
