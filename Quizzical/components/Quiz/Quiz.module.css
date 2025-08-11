@@ -1,0 +1,12 @@
+.quiz-question{
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+.quiz-container{
+    max-width: 600px;
+    border-bottom: 0.79px solid #DBDEF0;
+}
