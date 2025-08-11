@@ -1,6 +1,16 @@
 # Front-end solo
 A collection of diverse web applications and clones showcasing front-end development skills.
 ## Projects Overview
+
+
+17. [React Component](./React%20Component/)
+- **Technologies**: React
+- **Live Demo**: 
+https://wondrous-cucurucho-45cbf2.netlify.app/
+![alt text](screenshots/component1.png)
+![alt text](screenshots/component2.png)
+![alt text](screenshots/component3.png)
+
 16. [Tenzies Game](./Tenzies%20game/)
 - **Technologies**: React
 - **Features**: Roll the virtual dice and hold the ones you want to keep, while continuing to roll the remaining dice. Win the game by strategically holding dice until all show the same value, creating a challenging yet engaging game of chance and strategy.

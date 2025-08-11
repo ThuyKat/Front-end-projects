@@ -29,7 +29,6 @@ const handleSubmit= async(formData)=>{
 
     loginUser(loginData).then(data => {
         setState("idle")
-        console.log(data)
         if(data.status === 200){
             setError(null)
             navigate("/host", {replace:true})
