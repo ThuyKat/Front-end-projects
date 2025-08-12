@@ -4,9 +4,25 @@
     font-style: bold;
     line-height: 100%;
     letter-spacing: 0%;
-
+    color:#293264;
 }
 .quiz-container{
     max-width: 600px;
     border-bottom: 0.79px solid #DBDEF0;
+}
+.quiz-option{
+    border-radius:25px;
+    border:0.79px solid #4D5B9E;
+    color:#293264;
+    background-color: white;
+    font-family: "Inter", sans-serif;
+    font-weight:500;
+    font-size:0.65rem;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    margin: auto 0.7rem;
+    cursor: pointer;
+}
+.quiz-option .selected{
+    background-color: #D6DBF5;
 }

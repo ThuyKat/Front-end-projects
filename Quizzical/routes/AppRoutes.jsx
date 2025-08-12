@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
-import Quizzes from "../pages/Quizzes";
+import Quizzes from "../pages/quizzes";
 export default function AppRoutes(){
     return(
         <Routes>
