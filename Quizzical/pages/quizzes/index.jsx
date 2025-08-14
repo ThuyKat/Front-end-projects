@@ -40,7 +40,6 @@ if (quizzes.length !== 0) {
     console.log("quiz",quizzes)
     const quizEl =  quizzes.map((quiz,index)=>{
         return(
-            
             <Quiz
                 key={index}
                 question={quiz.question}
@@ -52,8 +51,6 @@ if (quizzes.length !== 0) {
     
     return (
         <div className={styles['quizzes-container']} >
-            <h1>Quizzes Page</h1>
-            <p>Welcome to the quizzes section!</p>
             {quizEl}
         </div>
     );
