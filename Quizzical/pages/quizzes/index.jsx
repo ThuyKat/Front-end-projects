@@ -27,32 +27,34 @@ useEffect(() => {
             }
         };
         fetchQuizzes();
-    }, []);
+    }, [quizzes]);
 
     //quizzes elements
     if (loading) {
         return <div className={styles['loading']}>Loading quizzes...</div>;
+    }else{
+        if (quizzes.length !== 0) {
+        console.log("quiz",quizzes)
+        const quizEl =  quizzes.map((quiz,index)=>{
+            return(
+                <Quiz
+                    key={index}
+                    question={quiz.question}
+                    options={[quiz.correct_answer, ...quiz.incorrect_answers]} 
+                />
+
+            )
+        })
+        
+        return (
+            <div className={styles['quizzes-container']} >
+                {quizEl}
+            </div>
+        );
+    }
     }
     if (error) {
-        return <div className={styles['error']}>Error: {error}</div>;
+        console.log(error)
     }   
-if (quizzes.length !== 0) {
-    console.log("quiz",quizzes)
-    const quizEl =  quizzes.map((quiz,index)=>{
-        return(
-            <Quiz
-                key={index}
-                question={quiz.question}
-                options={[quiz.correct_answer, ...quiz.incorrect_answers]} 
-            />
-
-        )
-    })
     
-    return (
-        <div className={styles['quizzes-container']} >
-            {quizEl}
-        </div>
-    );
-}
 }
